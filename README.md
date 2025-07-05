@@ -2,6 +2,27 @@
 
 This is a task done during preparations for Fawry's Rise Journey program.
 
+## How to Run the Tests
+
+### Prerequisites
+
+- Java 8 or higher installed
+- Java compiler (javac) available in PATH
+
+### Quick Start
+
+#### Option 1: Interactive Test Runner (Highly Recommended)
+
+```bash
+./run-tests.sh
+```
+
+On windows, you can use git bash terminal [get it with 'git' from here.](https://git-scm.com/downloads/win)
+
+This launches an interactive menu where you can choose specific test cases to run.
+
+For manual command execution see the instructions below.
+
 ## What This Project Does
 
 This is a comprehensive e-commerce system demo that showcases:
@@ -24,26 +45,7 @@ This is a comprehensive e-commerce system demo that showcases:
 - **Error Handling**: Comprehensive validation for expired products, insufficient stock, and insufficient balance
 - **Professional Receipts**: Detailed checkout summaries with all calculations
 
-## How to Run the Tests
-
-### Prerequisites
-
-- Java 8 or higher installed
-- Java compiler (javac) available in PATH
-
-### Quick Start
-
-#### Option 1: Interactive Test Runner (Highly Recommended)
-
-```bash
-./run-tests.sh
-```
-
-On windows, you can use git bash terminal [get it with 'git' from here.](https://git-scm.com/downloads/win)
-
-This launches an interactive menu where you can choose specific test cases to run.
-
-#### Option 2: Manual Compilation and Execution
+## How to Run the Tests - Manual Compilation and Execution
 
 ```bash
 # Compile all Java files
