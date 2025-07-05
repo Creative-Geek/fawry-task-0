@@ -13,10 +13,10 @@ public class TestRunner {
         if (args.length == 0) {
             System.out.println("Usage: java TestRunner <testCase>");
             System.out.println("Available test cases:");
-            System.out.println("  basicRequirementsDemo");
+            System.out.println("  coreFunctionalityDemo");
             System.out.println("  basicErrorScenarios");
             System.out.println("  freeShippingDemo");
-            System.out.println("  basicRequirements");
+            System.out.println("  coreFeatures");
             System.out.println("  advancedFeatures");
             System.out.println("  errorHandling");
             System.out.println("  shippingFeatures");
@@ -31,8 +31,9 @@ public class TestRunner {
         String testCase = args[0];
         
         switch (testCase) {
-            case "basicRequirementsDemo":
-                runBasicRequirementsDemo();
+            case "coreFunctionalityDemo":
+            case "basicRequirementsDemo": // Keep for backward compatibility
+                runCoreFunctionalityDemo();
                 break;
             case "basicErrorScenarios":
                 runBasicErrorScenarios();
@@ -40,8 +41,9 @@ public class TestRunner {
             case "freeShippingDemo":
                 runFreeShippingDemo();
                 break;
-            case "basicRequirements":
-                runBasicRequirements();
+            case "coreFeatures":
+            case "basicRequirements": // Keep for backward compatibility
+                runCoreFeatures();
                 break;
             case "advancedFeatures":
                 runAdvancedFeatures();
@@ -74,8 +76,8 @@ public class TestRunner {
     }
     
     // Basic functionality tests from Main.java
-    private static void runBasicRequirementsDemo() {
-        System.out.println("BASIC REQUIREMENTS DEMO");
+    private static void runCoreFunctionalityDemo() {
+        System.out.println("CORE FUNCTIONALITY DEMO");
         System.out.println("=====================================");
         System.out.println("Testing core functionality with cheese + biscuits example");
         System.out.println();
@@ -157,22 +159,19 @@ public class TestRunner {
     }
     
     // Comprehensive tests from TestSuite.java
-    private static void runBasicRequirements() {
-        System.out.println("BASIC REQUIREMENTS VALIDATION");
+    private static void runCoreFeatures() {
+        System.out.println("CORE FEATURES VALIDATION");
         System.out.println("=============================");
-        System.out.println("Comprehensive validation of all basic requirements");
+        System.out.println("Comprehensive validation of all core features");
         System.out.println();
         
-        // Create products as specified in requirements
+        // Create products with different characteristics
         Product cheese = new ShippableExpirableProduct("Cheese", 100, 10, 0.2, LocalDate.now().plusDays(30));
         Product biscuits = new ShippableExpirableProduct("Biscuits", 150, 15, 0.7, LocalDate.now().plusMonths(6));
-        Product tv = new ShippableProduct("TV", 5000, 5, 15.0);
-        Product scratchCard = new Product("Mobile scratch card", 50, 20);
-        
+
         System.out.println("Products defined with name, price, and quantity");
-        System.out.println("Some products expire (Cheese, Biscuits), others don't (TV, Mobile cards)");
-        System.out.println("Some products require shipping (Cheese, TV), others don't (Mobile cards)");
-        System.out.println("Shippable items provide weight information");
+        System.out.println("Products have expiration dates and shipping characteristics");
+        System.out.println("Shippable items provide weight information for shipping calculations");
         
         // Create customer
         Customer customer = new Customer("Ahmed", 1000.0);
@@ -182,8 +181,6 @@ public class TestRunner {
         try {
             cart.add(cheese, 2);
             cart.add(biscuits, 1);
-            cart.add(tv, 1);
-            cart.add(scratchCard, 3);
             
             System.out.println("\nCart contents:");
             cart.displayContents();

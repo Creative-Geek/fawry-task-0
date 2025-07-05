@@ -41,12 +41,12 @@ while true; do
     echo -e "${CYAN}Choose a test case to run:${NC}"
     echo
     echo "BASIC FUNCTIONALITY TESTS:"
-    echo "  1. Basic Requirements Demo"
+    echo "  1. Core Functionality Demo"
     echo "  2. Basic Error Scenarios"
     echo "  3. Free Shipping Demo"
     echo
     echo "COMPREHENSIVE TESTS:"
-    echo "  4. Basic Requirements Validation"
+    echo "  4. Core Features Validation"
     echo "  5. Advanced Features Demo"
     echo "  6. Error Handling Tests"
     echo "  7. Shipping Features Tests"
@@ -71,10 +71,10 @@ while true; do
         1)
             echo
             echo -e "${BLUE}========================================"
-            echo -e " Basic Requirements Demo"
+            echo -e " Core Functionality Demo"
             echo -e "========================================${NC}"
             echo
-            java TestRunner basicRequirementsDemo
+            java TestRunner coreFunctionalityDemo
             ;;
         2)
             echo
@@ -95,10 +95,10 @@ while true; do
         4)
             echo
             echo -e "${BLUE}========================================"
-            echo -e " Basic Requirements Validation"
+            echo -e " Core Features Validation"
             echo -e "========================================${NC}"
             echo
-            java TestRunner basicRequirements
+            java TestRunner coreFeatures
             ;;
         5)
             echo

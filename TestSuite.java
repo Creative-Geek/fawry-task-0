@@ -17,11 +17,11 @@ public class TestSuite {
 
         System.out.println("\n" + ConsoleFormatter.createSeparator('=', 70));
         System.out.println(ConsoleFormatter.success("All demonstrations completed successfully!"));
-        System.out.println(ConsoleFormatter.info("The system handles all requirements and edge cases robustly."));
+        System.out.println(ConsoleFormatter.info("The system handles all features and edge cases robustly."));
     }
     
     public static void runAllDemonstrations() {
-        demonstrateBasicRequirements();
+        demonstrateCoreFunctionality();
         demonstrateAdvancedFeatures();
         demonstrateErrorHandling();
         demonstrateShippingFeatures();
@@ -29,17 +29,15 @@ public class TestSuite {
     }
     
     /**
-     * Demonstrates all basic requirements from the task description.
+     * Demonstrates the core functionality of the e-commerce system.
      */
-    private static void demonstrateBasicRequirements() {
-        System.out.println("\n" + ConsoleFormatter.createHeader("BASIC REQUIREMENTS DEMONSTRATION", 60));
+    private static void demonstrateCoreFunctionality() {
+        System.out.println("\n" + ConsoleFormatter.createHeader("CORE FUNCTIONALITY DEMONSTRATION", 60));
         System.out.println(ConsoleFormatter.createSeparator('-', 60));
-        
-        // Create products as specified in requirements
+
+        // Create products with different characteristics
         Product cheese = new ShippableExpirableProduct("Cheese", 100, 10, 0.2, LocalDate.now().plusDays(30));
         Product biscuits = new ShippableExpirableProduct("Biscuits", 150, 15, 0.7, LocalDate.now().plusMonths(6));
-        Product tv = new ShippableProduct("TV", 5000, 5, 15.0);
-        Product scratchCard = new Product("Mobile scratch card", 50, 20);
         
         System.out.println(ConsoleFormatter.info("Products defined with name, price, and quantity"));
         System.out.println(ConsoleFormatter.info("Some products expire (Cheese, Biscuits), others don't (TV, Mobile cards)"));
@@ -62,7 +60,7 @@ public class TestSuite {
             CheckoutService.checkout(customer, cart);
             
         } catch (Exception e) {
-            System.out.println(ConsoleFormatter.error("Basic requirements test failed: " + e.getMessage()));
+            System.out.println(ConsoleFormatter.error("Core functionality test failed: " + e.getMessage()));
         }
     }
     

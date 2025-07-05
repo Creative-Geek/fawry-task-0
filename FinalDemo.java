@@ -21,7 +21,7 @@ public class FinalDemo {
         System.out.println(ConsoleFormatter.BOLD + ConsoleFormatter.BLUE +
             "FAWRY RISE JOURNEY - E-COMMERCE SYSTEM FINAL DEMO" + ConsoleFormatter.RESET);
         System.out.println(ConsoleFormatter.createSeparator('=', 80));
-        System.out.println(ConsoleFormatter.info("Demonstrating an enhanced e-commerce system that goes beyond requirements"));
+        System.out.println(ConsoleFormatter.info("Demonstrating an enhanced e-commerce system with advanced features"));
         System.out.println(ConsoleFormatter.info("Features: Smart discounts, tax calculation, professional UI, and more!"));
         System.out.println(ConsoleFormatter.createSeparator('=', 80));
     }
@@ -40,8 +40,8 @@ public class FinalDemo {
         Customer vipCustomer = new Customer("Sarah (VIP)", 10000.0);
         Customer newCustomer = new Customer("John (New)", 1000.0);
         
-        // Scenario 1: Basic Requirements Demo
-        demonstrateBasicRequirements(cheese, biscuits, regularCustomer);
+        // Scenario 1: Core Functionality Demo
+        demonstrateCoreFunctionality(cheese, biscuits, regularCustomer);
         
         // Scenario 2: VIP Customer with Multiple Discounts
         demonstrateVIPScenario(laptop, tv, vipCustomer);
@@ -56,8 +56,8 @@ public class FinalDemo {
         demonstrateFreeShipping(tv, vipCustomer);
     }
     
-    private static void demonstrateBasicRequirements(Product cheese, Product biscuits, Customer customer) {
-        System.out.println("\n" + ConsoleFormatter.createHeader("SCENARIO 1: BASIC REQUIREMENTS", 70));
+    private static void demonstrateCoreFunctionality(Product cheese, Product biscuits, Customer customer) {
+        System.out.println("\n" + ConsoleFormatter.createHeader("SCENARIO 1: CORE FUNCTIONALITY", 70));
         System.out.println(ConsoleFormatter.createSeparator('-', 70));
         System.out.println(ConsoleFormatter.info("Demonstrating core functionality"));
 
@@ -190,7 +190,7 @@ public class FinalDemo {
             "DEMONSTRATION COMPLETE - SYSTEM HIGHLIGHTS" + ConsoleFormatter.RESET);
         System.out.println(ConsoleFormatter.createSeparator('=', 80));
 
-        System.out.println(ConsoleFormatter.success("All basic requirements implemented and working perfectly"));
+        System.out.println(ConsoleFormatter.success("All core features implemented and working perfectly"));
         System.out.println(ConsoleFormatter.success("Advanced features: Smart discounts, tax calculation, professional UI"));
         System.out.println(ConsoleFormatter.success("Robust error handling with custom exceptions"));
         System.out.println(ConsoleFormatter.success("Weight-based shipping with free shipping threshold"));
@@ -200,7 +200,7 @@ public class FinalDemo {
         System.out.println(ConsoleFormatter.success("Extensible design ready for future enhancements"));
 
         System.out.println("\n" + ConsoleFormatter.BOLD + ConsoleFormatter.BLUE +
-            "This solution goes far beyond the basic requirements!" + ConsoleFormatter.RESET);
+            "This solution includes many advanced features!" + ConsoleFormatter.RESET);
         System.out.println(ConsoleFormatter.info("Features like smart discounts, tax calculation, and professional UI"));
         System.out.println(ConsoleFormatter.info("demonstrate advanced software engineering skills and business acumen."));
 
